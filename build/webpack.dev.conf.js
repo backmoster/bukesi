@@ -10,7 +10,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 
-//----------------------------------------------------------------------------
 const express = require('express')
 const app = express()
 const appData = require('../data.json')
@@ -19,7 +18,6 @@ const science = appData.science
 const humanity = appData.humanity
 const apiRouters = express.Router()
 app.use('/api',apiRouters)
-//----------------------------------------------------------------------------
 
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
@@ -34,32 +32,31 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   // these devServer options should be customized in /config/index.js
   devServer: {
     before(app){
-    app.get('/api/literature', (req, res) => {
-    res.json({
-      errno: 0,
-      data: literature
-      })
-    }),
-    app.get('/api/science', (req, res) => {
+      app.get('/api/literature', (req, res) => {
       res.json({
         errno: 0,
-        data: science
+        data: literature
+        })
+      }),
+      app.get('/api/science', (req, res) => {
+        res.json({
+          errno: 0,
+          data: science
+        })
+      }),
+      app.get('/api/humanity', (req, res) => {
+        res.json({
+          errno: 0,
+          data: humanity
+        })
       })
-    }),
-    app.get('/api/humanity', (req, res) => {
-      res.json({
-        errno: 0,
-        data: humanity
-      })
-    })
-  },
+    },
     clientLogLevel: 'warning',
     historyApiFallback: {
       rewrites: [
         { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'index.html') },
       ],
     },
-
     hot: true,
     contentBase: false, // since we use CopyWebpackPlugin.
     compress: true,
