@@ -4,5 +4,5 @@
 2.具体请看( https://www.cnblogs.com/M-M-Monica/ )<br>
 ![](https://github.com/M-M-Monica/V-monica.github.io/blob/master/pic/bukesi.gif)<br>
 ![](https://github.com/M-M-Monica/V-monica.github.io/blob/master/pic/bukesi.png)<br>
-![](https://github.com/M-M-Monica/V-monica.github.io/blob/master/pic/cart.jpg)<br>
-![](https://github.com/M-M-Monica/V-monica.github.io/blob/master/pic/detail.jpg)
+![](https://github.com/M-M-Monica/V-monica.github.io/blob/master/pic/cart.JPG)<br>
+![](https://github.com/M-M-Monica/V-monica.github.io/blob/master/pic/detail.JPG)
